@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  get '/signup' do
+  get '/signup' do #user signup
     erb :'/users/signup'
   end
 
@@ -14,7 +14,7 @@ class UsersController < ApplicationController
     end
   end
 
-  get '/login' do
+  get '/login' do #user login
     erb :'/users/login'
   end
 
@@ -29,7 +29,7 @@ class UsersController < ApplicationController
     end
   end
 
-  get '/logout' do
+  get '/logout' do #user logout
     if Helpers.logged_in?(session)
       session.clear
       redirect '/login'
@@ -37,5 +37,11 @@ class UsersController < ApplicationController
       redirect '/'
     end
   end
+
+  get '/users/:slug' do # user show page
+    @user = User.find_by_slug(params[:slug])
+    @trips = @user.trips
+    erb :'/users/show'
+  end 
 
 end
