@@ -1,27 +1,29 @@
-<h1><%= @trip.name %></h1>
-
-<% if @trip.destination.present? %>
-  <p>Destination: <%= @trip.destination %></p>
-<% end %>
-
-<% if @trip.arrival_date.present? %>
-  <p>Arrival Date: <%= @trip.arrival_date %></p>
-<% end %>
-
-<% if @trip.duration.present? %>
-  <p>Duration: <%= @trip.duration %></p>
-<% end %>
-
-<% if @trip.reflections.present? %>
-  <p>Reflections: <%= @trip.reflections %></p>
-<% end %>
-
 <br>
 <a href="/trips">See all trips</a>
 <br>
-<a href="/trips/<%= @trip.id %>/edit">Edit Trip</a>
+
+<h1><%= @trip.name %></h1>
+
+<% if @trip.destination.present? %>
+  <p><strong>Destination:</strong> <%= @trip.destination %></p>
+<% end %>
+
+<% if @trip.arrival_date.present? %>
+  <p><strong>Arrival Date:</strong> <%= @trip.arrival_date %></p>
+<% end %>
+
+<% if @trip.duration.present? %>
+  <p><strong>Duration:</strong> <%= @trip.duration %></p>
+<% end %>
+
+<% if @trip.reflections.present? %>
+  <p><strong>Reflections:</strong> <%= @trip.reflections %></p>
+<% end %>
+
 <br>
+<a href="/trips/<%= @trip.id %>/edit" class="btn btn-success">Edit Trip</a>
+
 <form action="/trips/<%= @trip.id %>/delete" method="POST">
   <input type="hidden" name="_method" value="delete">
-  <input type="submit" value="Delete Trip">
+  <input type="submit" class="btn btn-danger" value="Delete Trip">
 </form>

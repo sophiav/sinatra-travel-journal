@@ -1,22 +1,33 @@
 <h1>Add a new Trip</h1>
 
 <form action="/trips" method="POST">
-  <label for="name">Trip Name</label>
-  <input id="name" type="text" name="trip[name]">
-  <br>
-  <label for="destination">Destination</label>
-  <input id="destination" type="text" name="trip[destination]">
-  <br>
-  <label for="arrival_date">Arrival Date</label>
-  <input id="arrival_date" type="date" name="trip[arrival_date]">
-  <br>
-  <label for="duration">Duration (in days)</label>
-  <input id="duration" type="text" name="trip[duration]">
-  <br>
-  <label for="reflections">Reflections</label>
-  <textarea id="reflections" name="trip[reflections]" cols="30" placeholder="Write trip reflections here"></textarea>
+  <div class="form-group">
+    <label for="name">Trip Name</label>
+    <input id="name" type="text" class="form-control" name="trip[name]">
+  </div>
 
-  <br><br>
-  <input type="submit" value="Create Trip">
+  <div class="form-group">
+    <label for="destination">Destination</label>
+    <input id="destination" type="text" class="form-control" name="trip[destination]">
+  </div>
+
+  <div class="form-group">
+    <label for="arrival_date">Arrival Date</label>
+    <input id="arrival_date" type="date" class="form-control" name="trip[arrival_date]">
+  </div>
+
+  <div class="form-group">
+    <label for="duration">Duration (in days)</label>
+    <input id="duration" type="text" class="form-control" name="trip[duration]">
+  </div>
+
+  <div class="form-group">
+    <label for="reflections">Reflections</label>
+    <textarea id="reflections" class="form-control" name="trip[reflections]" cols="30" placeholder="Write trip reflections here"></textarea>
+  </div>
+
+  <div class="form-group">
+    <input type="submit" class="btn btn-default" value="Create Trip">
+  </div>
 </form>
 
