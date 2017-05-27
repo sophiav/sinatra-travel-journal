@@ -35,5 +35,11 @@ class TripsController < ApplicationController
     redirect "/trips/#{@trip.id}"
   end
 
+  delete '/trips/:id/delete' do
+    trip = Trip.find(params[:id])
+    trip.destroy!
+    redirect '/trips'
+  end
+
 end
 
