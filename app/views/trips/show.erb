@@ -17,7 +17,10 @@
 <% end %>
 
 <br>
+<a href="/trips">See all trips</a>
+<br>
 <a href="/trips/<%= @trip.id %>/edit">Edit Trip</a>
+<br>
 <form action="/trips/<%= @trip.id %>/delete" method="POST">
   <input type="hidden" name="_method" value="delete">
   <input type="submit" value="Delete Trip">

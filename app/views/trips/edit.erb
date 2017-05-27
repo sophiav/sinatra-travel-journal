@@ -2,6 +2,10 @@
 
 <form action="/trips/<%= @trip.id %>" method="POST">
   <input id="hidden" type="hidden" name="_method" value="patch">
+  
+  <label for="name">Name</label>
+  <input id="name" type="text" name="trip[name]" value="<%= @trip.name %>">
+  <br>
 
   <label for="destination">Destination</label>
   <input id="destination" type="text" name="trip[destination]" value="<%= @trip.destination %>">
@@ -13,7 +17,7 @@
   <input id="duration" type="text" name="trip[duration]" value="<%= @trip.duration %>">
   <br>
   <label for="reflections">Reflections</label>
-  <textarea id="reflections" name="trip[reflections]" cols="30" placeholder="Write trip reflections here" value="<%= @trip.reflections %>"></textarea>
+  <textarea id="reflections" name="trip[reflections]" cols="30" placeholder="Write trip reflections here"><%= @trip.reflections %></textarea>
 
   <br><br>
   <input type="submit" value="Save">
