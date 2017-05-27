@@ -5,17 +5,18 @@
   <input id="name" type="text" name="name">
   <br>
   <label for="destination">Destination</label>
-  <input id="destination" type="text" name="destination">
+  <input id="destination" type="text" name="trip[destination]">
   <br>
   <label for="arrival_date">Arrival Date</label>
-  <input id="arrival_date" type="date" name="arrival_date">
+  <input id="arrival_date" type="date" name="trip[arrival_date]">
   <br>
   <label for="duration">Duration (in days)</label>
-  <input id="duration" type="text" name="duration">
+  <input id="duration" type="text" name="trip[duration]">
   <br>
   <label for="reflections">Reflections</label>
-  <textarea id="reflections" name="reflections" rows="5" cols="30" placeholder="Write trip reflections here"></textarea>
+  <textarea id="reflections" name="trip[reflections]" cols="30" placeholder="Write trip reflections here"></textarea>
 
   <br><br>
   <input type="submit" value="Create Trip">
 </form>
+
