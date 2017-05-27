@@ -1,0 +1,22 @@
+<h1><%= @trip.name %></h1>
+
+<% if @trip.destination.present? %>
+  <p>Destination: <%= @trip.destination %></p>
+<% end %>
+
+<% if @trip.arrival_date.present? %>
+  <p>Arrival Date: <%= @trip.arrival_date %></p>
+<% end %>
+
+<% if @trip.duration.present? %>
+  <p>Duration: <%= @trip.duration %></p>
+<% end %>
+
+<% if @trip.reflections.present? %>
+  <p>Reflections: <%= @trip.reflections %></p>
+<% end %>
+
+<!--   <p>Destination: <%= @trip.destination %></p>
+  <p>Arrival Date: <%= @trip.arrival_date %></p>
+  <p>Duration: <%= @trip.duration %></p>
+ -->

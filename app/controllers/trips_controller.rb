@@ -8,8 +8,7 @@ class TripsController < ApplicationController
   end
 
   post '/trips' do
-    puts params
-    @trip = Trip.new(name: params[:name])
+    @trip = Trip.new(params)
     @trip.user_id = session[:user_id]
 
     if @trip.save
@@ -17,6 +16,11 @@ class TripsController < ApplicationController
     else
       redirect '/trips/new'
     end
+  end
+
+  get '/trips/:id' do # show trip
+    @trip = Trip.find(params[:id])
+    erb :'/trips/show'
   end
 
 end
