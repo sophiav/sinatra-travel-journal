@@ -1,24 +1,36 @@
 <h1>Edit your Trip</h1>
+<hr>
 
 <form action="/trips/<%= @trip.id %>" method="POST">
   <input id="hidden" type="hidden" name="_method" value="patch">
   
-  <label for="name">Name</label>
-  <input id="name" type="text" name="trip[name]" value="<%= @trip.name %>">
-  <br>
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input id="name" type="text" class="form-control" name="trip[name]" value="<%= @trip.name %>">
+  </div>
 
-  <label for="destination">Destination</label>
-  <input id="destination" type="text" name="trip[destination]" value="<%= @trip.destination %>">
-  <br>
-  <label for="arrival_date">Arrival Date</label>
-  <input id="arrival_date" type="date" name="trip[arrival_date]" value="<%= @trip.arrival_date %>">
-  <br>
-  <label for="duration">Duration (in days)</label>
-  <input id="duration" type="text" name="trip[duration]" value="<%= @trip.duration %>">
-  <br>
-  <label for="reflections">Reflections</label>
-  <textarea id="reflections" name="trip[reflections]" cols="30" placeholder="Write trip reflections here"><%= @trip.reflections %></textarea>
+  <div class="form-group">
+    <label for="destination">Destination</label>
+    <input id="destination" type="text" class="form-control" name="trip[destination]" value="<%= @trip.destination %>">
+  </div>
 
-  <br><br>
-  <input type="submit" class="btn btn-primary" value="Save">
+  <div class="form-group">
+    <label for="arrival_date">Arrival Date</label>
+    <input id="arrival_date" type="date" class="form-control" name="trip[arrival_date]" value="<%= @trip.arrival_date %>">
+  </div>
+
+  <div class="form-group">
+    <label for="duration">Duration (in days)</label>
+    <input id="duration" type="text" class="form-control" name="trip[duration]" value="<%= @trip.duration %>">
+  </div>
+
+  <div class="form-group">
+    <label for="reflections">Reflections</label>
+    <textarea id="reflections" class="form-control" name="trip[reflections]" cols="30" placeholder="Write trip reflections here"><%= @trip.reflections %></textarea>
+  </div>
+
+  <div class="form-group">
+    <input type="submit" class="btn btn-primary" value="Save">
+  </div>
+
 </form>
