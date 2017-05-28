@@ -1,9 +1,10 @@
 <h1>Travel Journal</h1>
-<h3>Here's a list of all your trips:</h3>
+<hr/>
+<h4>Here's a list of all your trips:</h4>
 <% @trips.each do |trip| %>
-  <p> <a href="/trips/<%= trip.id %>"><%= trip.name %></a> </p>
+  <h4><a href="/trips/<%= trip.id %>"><%= trip.name %></a></h4>
 <% end %>
 
-<br><br>
+<br>
 <a href="/trips/new" class="btn btn-primary">New Trip</a>
 <a href="/logout" class="btn btn-default">Log Out</a>
