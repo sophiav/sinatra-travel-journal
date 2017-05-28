@@ -23,6 +23,7 @@
 <br>
 <a href="/trips/<%= @trip.id %>/edit" class="btn btn-success">Edit Trip</a>
 
+<br><br>
 <form action="/trips/<%= @trip.id %>/delete" method="POST">
   <input type="hidden" name="_method" value="delete">
   <input type="submit" class="btn btn-danger" value="Delete Trip">
