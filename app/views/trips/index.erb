@@ -2,7 +2,9 @@
 <hr/>
 <h4>Here's a list of all your trips:</h4>
 <% @trips.each do |trip| %>
-  <h4><a href="/trips/<%= trip.id %>"><%= trip.name %></a></h4>
+  <ul>
+    <li><h4><a href="/trips/<%= trip.id %>"><%= trip.name %></a></h4></li>
+  </ul>
 <% end %>
 
 <br>

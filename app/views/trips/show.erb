@@ -1,8 +1,8 @@
-<br>
-<a href="/trips">See all trips</a>
-<br>
-
 <h1><%= @trip.name %></h1>
+<hr>
+
+<a href="/trips">See all trips</a>
+<br><br><br>
 
 <% if @trip.destination.present? %>
   <p><strong>Destination:</strong> <%= @trip.destination %></p>
