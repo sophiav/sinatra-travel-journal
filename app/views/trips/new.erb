@@ -1,5 +1,15 @@
 <h1>Add a new Trip</h1>
 
+<% if flash.has?(:error) %>
+  <div class="alert alert-danger" role="alert">
+    <ul>
+      <% flash[:error].each do |error| %>
+        <li><%= error %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
 <form action="/trips" method="POST">
   <div class="form-group">
     <label for="name">Trip Name</label>
